@@ -1,0 +1,11 @@
+numpy
+pandas
+
+python-dotenv
+
+vaderSentiment
+
+langchain_anthropic
+langchain_core
+
+fastapi[standard]
