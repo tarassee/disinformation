@@ -58,3 +58,33 @@ Response will be in the following format:
   - 2: Emotional Clickbait
   - 3: Trolling
   - 4: Polarization
+
+## Docker
+
+### Local
+
+To build the docker image run:
+
+```bash
+docker build -t red_flags .
+```
+
+Then run to run the API:
+
+```bash
+docker run -p 8080:8080 red_flags
+```
+
+### Pull from Docker Hub
+
+To pull the image from Docker Hub run:
+
+```bash
+docker pull yehorkhod/red_flags
+```
+
+Then run to run the API:
+
+```bash
+docker run -p 8080:8080 yehorkhod/red_flags
+```
