@@ -9,3 +9,6 @@ langchain_anthropic
 langchain_core
 
 fastapi[standard]
+
+mangum~=0.19.0
+pydantic~=2.10.2
