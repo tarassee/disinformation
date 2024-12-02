@@ -1,4 +1,4 @@
-from concurrent.futures import ProcessPoolExecutor, wait
+from concurrent.futures import ThreadPoolExecutor, wait
 from typings import RedFlag
 from services import (
     whataboutism_service,
@@ -18,7 +18,7 @@ def run_services(tweet: str) -> list[RedFlag]:
         polarization_service,
     ]
 
-    with ProcessPoolExecutor(N_EXECUTORS) as exe:
+    with ThreadPoolExecutor(N_EXECUTORS) as exe:
         futures = [exe.submit(service, tweet) for service in services]
         wait(futures)
 
